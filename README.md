@@ -2,6 +2,14 @@
 
 A responsive, buildless birthday-weekend itinerary for November 20–22, 2026.
 
+## Design inspiration
+
+The main visual reference is **Webagent 007 (2003)**, archived by Web Design Museum:
+
+https://www.webdesignmuseum.org/flash-websites-in-the-early-00s/webagent-007-2003
+
+Its layered Flash-era panels, metallic frames, cables, gold logo ornaments, and compact controls inspired this site's synthwave interpretation. The reference was used for visual direction; its original artwork was not extracted into the website.
+
 ## Development
 
 Serve `dist/` with a static web server. The site uses HTML, CSS, and JavaScript; no build step is needed.
