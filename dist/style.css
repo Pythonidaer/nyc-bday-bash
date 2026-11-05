@@ -127,3 +127,12 @@ footer .designer-credit{font-family:Press,monospace;color:#fff09c}
 
 @media(hover:none){.player{transition:none}.player:hover{transform:none;filter:none}.player.selected:hover{filter:drop-shadow(0 0 2px #00ffff)}}
 button,a{touch-action:manipulation}
+/* Touch-device diagnostic: reduce page compositing during native dialog changes. */
+@media(hover:none) and (pointer:coarse){
+.console{isolation:isolate;background-image:repeating-linear-gradient(135deg,transparent 0 8px,#ff20c70b 8px 9px)}
+.crew{background-image:radial-gradient(ellipse at 85% 32%,#00c9ff80,transparent 45%),radial-gradient(ellipse at 10% 90%,#fc00c760,transparent 60%);background-blend-mode:normal}
+.player,.player.selected,.player:hover,.player.selected:hover,.dog.metal-frame,.ornament,.activity img{filter:none;transition:none}
+.player.selected{outline:2px solid #25ffff}
+dialog{box-shadow:0 0 0 3px #ed15b4}
+dialog::backdrop{background:#050414e8;backdrop-filter:none;-webkit-backdrop-filter:none}
+}
