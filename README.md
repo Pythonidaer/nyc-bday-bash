@@ -1,0 +1,68 @@
+# RA's NYC Birthday Bash
+
+A responsive, buildless birthday-weekend itinerary for November 20–22, 2026.
+
+## Development
+
+Serve `dist/` with a static web server. The site uses HTML, CSS, and JavaScript; no build step is needed.
+
+## Asset credits
+
+No AI-generated imagery is included in the website. Layout, metallic frames, gold ornaments, cables, patterns, and question mark are custom code and SVG.
+
+### Skyline Background
+
+- Creator: FabinhoSC
+- Source: https://opengameart.org/content/skyline-background
+- License: [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
+- File: `dist/assets/city.png`
+- Modifications: Unmodified example 03 from original 2021 archive
+
+### Roller Skate
+
+- Creator: Delapouite
+- Source: https://game-icons.net/1x1/delapouite/roller-skate.html
+- License: [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
+- File: `dist/assets/skate.svg`
+- Modifications: Removed background and recolored foreground for synthwave palette.
+
+### Martini
+
+- Creator: Lorc
+- Source: https://game-icons.net/1x1/lorc/martini.html
+- License: [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
+- File: `dist/assets/cocktail.svg`
+- Modifications: Removed background and recolored foreground for synthwave palette.
+
+### Press Start 2P
+
+By CodeMan38. SIL Open Font License 1.1.
+
+https://fonts.google.com/specimen/Press+Start+2P
+
+Full license: `dist/assets/font-license.txt`. Game-icons license: `dist/assets/game-icons-license.txt`.
+
+## Content notes
+
+Player colors are provisional. The skyline is decorative, not an image of the Airbnb. Exact address, reservations, and remaining itinerary details are pending.
+
+### Munroe pixel sprite
+
+Dog by inmenus, built upon Shepardskin and Hellkipz. CC0. The creator explicitly states no generative AI was used.
+
+- Source: https://inmenus.itch.io/dog
+- License: https://creativecommons.org/publicdomain/zero/1.0/
+- Upstream: https://opengameart.org/content/german-shepherd-0 and https://opengameart.org/content/husky-sprites
+- Files: `dist/assets/munroe-sheet.png` (original downloaded 360×228 sprite sheet) and `dist/assets/munroe-pixel.png` (idle standing frame, cropped with transparent margins trimmed).
+
+Munroe portrait and connected nameplate: original hand-coded SVG artwork, drawn from the owner-provided dog photograph. No AI-generated image assets.
+
+## Future improvements
+
+### Optional entry screen
+
+Explore an introductory “Enter” screen inspired by **Cyphen (1998)**, archived by Web Design Museum:
+
+https://www.webdesignmuseum.org/exhibitions/cyphen-1998
+
+This is a reference for a future iteration, not part of the current site. The immediate plan is to deploy the itinerary and collect feedback from RA on the weekend plans and placeholder content before deciding whether to add an entry screen.
