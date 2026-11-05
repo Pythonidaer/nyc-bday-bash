@@ -117,3 +117,10 @@ footer .designer-credit{font-family:Press,monospace;color:#fff09c}
 .player:has(.birthday-tag) .initial{height:100%;padding:5px 0 0}
 
 .home-label-icon{display:inline-block;width:1.3em;height:1.3em;vertical-align:middle;margin-right:7px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;flex-shrink:0}
+
+.crew-heading{display:flex;align-items:center;justify-content:space-between;gap:8px}.crew-heading h3{margin:0;font-size:inherit;line-height:1.3;display:flex;align-items:center;gap:5px}.crew-heading .crew-person{display:block;width:20px;height:20px;fill:currentColor;flex-shrink:0}
+@media(max-width:960px){
+.crew-heading h3{font-size:10px;gap:4px;white-space:nowrap}.crew-heading .crew-person{width:16px;height:16px;margin:0}
+.crew-heading .radio-player{display:flex;align-items:center;gap:0;flex-shrink:0;color:#ff22c9}.crew-heading .radio-player .radio-name{display:inline;margin-right:6px;font:6px Press,monospace;white-space:nowrap}.crew-heading .radio-player button{display:flex;align-items:center;justify-content:center;width:28px;height:28px;flex:0 0 28px;padding:5px;border:1px solid #ef18bd;background:#10071b;color:#ff25c8}.crew-heading .radio-status{display:none}.crew-heading .radio-player svg{width:14px;height:14px}
+}
+@media(max-width:400px){.crew-heading h3{font-size:8px}.crew-heading .radio-player .radio-name{font-size:5px;margin-right:4px}.crew-heading .radio-player button{width:25px;height:28px;flex-basis:25px}}
