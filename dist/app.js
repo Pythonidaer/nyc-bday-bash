@@ -8,9 +8,6 @@ radioPlay.addEventListener('click',async()=>{if(!radio.paused){radio.pause();ret
 radioStop.addEventListener('click',()=>{radio.pause();radio.load();radioState(false);radioStatus.textContent=''});
 radio.addEventListener('playing',()=>{radioState(true);radioStatus.textContent='LIVE'});radio.addEventListener('pause',()=>{radioState(false);radioStatus.textContent='PAUSED'});radio.addEventListener('error',()=>{radioState(false);radioStatus.textContent='UNAVAILABLE'});
 
-// Reveal the assembled interface after its font and visible images settle.
-Promise.allSettled([document.fonts.load('16px Press'),...Array.from(document.images,img=>img.decode?img.decode():Promise.resolve())]).then(()=>{document.documentElement.classList.remove('is-loading')});
-
 // Move the same player so playback survives responsive layout changes.
 const musicPlayer=document.querySelector('.radio-player'),desktopMusicSlot=document.querySelector('.system'),mobileMusicSlot=document.querySelector('.crew-heading'),mobileMusicQuery=window.matchMedia('(max-width:960px)');
 function placeMusicPlayer(){if(mobileMusicQuery.matches)mobileMusicSlot.append(musicPlayer);else desktopMusicSlot.insertBefore(musicPlayer,desktopMusicSlot.lastElementChild)}
