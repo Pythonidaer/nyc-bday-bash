@@ -1,0 +1,44 @@
+[
+  {
+    "file": "city.png",
+    "title": "Skyline Background",
+    "author": "FabinhoSC",
+    "source": "https://opengameart.org/content/skyline-background",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "modifications": "Unmodified example 03 from original 2021 archive",
+    "note": "Decorative skyline, not a photograph of NYC or the accommodation."
+  },
+  {
+    "file": "skate.svg",
+    "title": "Roller Skate",
+    "author": "Delapouite",
+    "source": "https://game-icons.net/1x1/delapouite/roller-skate.html",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "modifications": "Removed background and recolored foreground for synthwave palette."
+  },
+  {
+    "file": "cocktail.svg",
+    "title": "Martini",
+    "author": "Lorc",
+    "source": "https://game-icons.net/1x1/lorc/martini.html",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "modifications": "Removed background and recolored foreground for synthwave palette."
+  },
+  {
+    "file": "munroe-pixel.png",
+    "title": "Dog",
+    "author": "inmenus; based on work by Shepardskin and Hellkipz",
+    "source": "https://inmenus.itch.io/dog",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "modifications": "Idle standing frame cropped from original downloaded sprite sheet; transparent margins trimmed. Original retained as munroe-sheet.png.",
+    "provenance": "Creator explicitly states no generative AI was used.",
+    "upstream_sources": [
+      "https://opengameart.org/content/german-shepherd-0",
+      "https://opengameart.org/content/husky-sprites"
+    ]
+  }
+]
