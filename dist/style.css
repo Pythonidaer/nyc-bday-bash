@@ -136,3 +136,12 @@ button,a{touch-action:manipulation}
 dialog{box-shadow:0 0 0 3px #ed15b4}
 dialog::backdrop{background:#050414e8;backdrop-filter:none;-webkit-backdrop-filter:none}
 }
+/* Mobile status occupies the label slot without moving transport controls. */
+@media(max-width:960px){
+.crew-heading .radio-player{display:grid;grid-template-columns:70px 28px 28px;align-items:center}
+.crew-heading .radio-player .radio-name{grid-area:1/1;margin:0;font-size:6px}
+.crew-heading .radio-player:has(.radio-status:not(:empty)) .radio-name{visibility:hidden}
+.crew-heading .radio-player .radio-status{display:block;grid-area:1/1;width:70px;min-width:0;margin:0;font:6px/1.4 Press,monospace;color:#79ff39;white-space:nowrap;text-align:left}
+.crew-heading #radio-play{grid-area:1/2}.crew-heading #radio-stop{grid-area:1/3}
+}
+@media(max-width:400px){.crew-heading .radio-player{grid-template-columns:63px 25px 25px}.crew-heading .radio-player .radio-name,.crew-heading .radio-player .radio-status{font-size:5px}.crew-heading .radio-player .radio-status{width:63px}}

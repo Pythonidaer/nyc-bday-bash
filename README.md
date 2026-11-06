@@ -74,3 +74,13 @@ Explore an introductory “Enter” screen inspired by **Cyphen (1998)**, archiv
 https://www.webdesignmuseum.org/exhibitions/cyphen-1998
 
 This is a reference for a future iteration, not part of the current site. The immediate plan is to deploy the itinerary and collect feedback from RA on the weekend plans and placeholder content before deciding whether to add an entry screen.
+
+## Social sharing previews
+
+Open Graph and Twitter Card metadata are included in the initial HTML and use the production canonical URL: https://pythonidaer.github.io/nyc-bday-bash/
+
+Cover: `dist/assets/social-preview-v1.png` (1200 × 630). Rebuild the cover and PNG browser icons with `python3 scripts/create-social-preview.py` (requires Pillow). The cover is rendered from code using the existing font and palette; no image generation is used. Font licensing remains as credited above.
+
+Preview image: https://pythonidaer.github.io/nyc-bday-bash/assets/social-preview-v1.png
+
+Social platforms may cache previews. Metadata supplies link previews where supported; it does not create an Instagram post or guarantee a thumbnail in every app.
