@@ -150,6 +150,7 @@ dialog::backdrop{background:#050414e8;backdrop-filter:none;-webkit-backdrop-filt
    lands between device pixels and shimmers. A soft edge stays even.
    Tile shadows stay drop-shadows so they follow the chamfered armor frame. */
 .player .initial{
+  color:var(--ink,#120d20);
   text-shadow:none;
   background-image:repeating-linear-gradient(
     to bottom,

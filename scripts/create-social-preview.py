@@ -10,12 +10,12 @@ d.rectangle((18,18,1181,611),outline=pink,width=4)
 d.rectangle((36,36,1163,593),outline='#65395f',width=2)
 d.text((65,66),'NYC BDAY BASH',font=font(49),fill=pink)
 d.text((68,145),"RA'S 44TH / NOV 20–22, 2026",font=font(22),fill=cyan)
-people=['RA','ZS','JH','MH','CF','MM','PH','JP','JC','DA'];colors=['#f398ce','#c2a2f1','#ffc2b0','#a3efc3','#a5d7ff','#d9a1ef','#fff09c','#b5b3fc','#ffa9c4','#92f0d1']
-for i,(name,color) in enumerate(zip(people,colors)):
+people=['RA','ZS','JH','MH','CF','MM','PH','JP','JC','DA'];colors=['#74C8FF','#FF8C00','#FF3B30','#1E6B3A','#8B45E8','#B6E82E','#1A3F9C','#FF7F6A','#FFE135','#FF5CA8'];inks=['#120d20','#120d20','#120d20','#F4FFF7','#F7F3FF','#120d20','#F3F7FF','#120d20','#120d20','#120d20']
+for i,(name,color,ink) in enumerate(zip(people,colors,inks)):
  x=68+(i%5)*216;y=220+(i//5)*145
  d.rounded_rectangle((x,y,x+198,y+128),radius=9,fill='#757087',outline='#bcb5cc',width=3)
  d.rectangle((x+10,y+10,x+188,y+118),fill=color,outline='#292035',width=4)
- d.text((x+99,y+66),name,font=font(43),fill=dark,anchor='mm')
+ d.text((x+99,y+66),name,font=font(43),fill=ink,anchor='mm')
  if i==0:d.rounded_rectangle((x-3,y-3,x+201,y+131),radius=10,outline=cyan,width=3)
 d.text((68,550),'10 FRIENDS + MUNROE',font=font(21),fill=cyan)
 d.text((1130,554),'NYC / 2026',font=font(16),fill='#fff09c',anchor='ra')
