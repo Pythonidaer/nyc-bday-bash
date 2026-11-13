@@ -207,3 +207,39 @@ dialog::backdrop{background:#050414e8;backdrop-filter:none;-webkit-backdrop-filt
   .dog.metal-frame:hover{filter:none;transform:none;transition:none}
   .dog.metal-frame:active{filter:brightness(1.13) drop-shadow(0 0 3px #eb36e1);transform:translateY(-2px);transition:filter .15s,transform .15s}
 }
+
+/* 2- and 3-across keep the same Munroe button. Only the frame changes:
+   the character armor, a rectangle two tiles wide or a full row. */
+@media(max-width:680px){
+  .crew{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:10px;row-gap:10px;container-type:inline-size}
+  .crew .bar{grid-column:1/-1;margin-bottom:2px}
+  .players,.crew-bottom{display:contents}
+  .player-slot,.dog.metal-frame,.crew-status{position:relative;z-index:1}
+  .dog.metal-frame{
+    grid-column:2/span 2;
+    width:auto;max-width:none;height:auto;min-width:0;min-height:0;
+    align-self:stretch;justify-self:stretch;
+    display:block;padding:0;overflow:hidden;container-type:size;
+    border:12px solid transparent;
+    border-image:url('assets/armor-frame.svg') 24 fill / 12px / 0 stretch;
+    background:#07060f;
+    background-image:none
+  }
+  .dog.metal-frame img{display:none}
+  .dog.metal-frame span{
+    position:absolute;inset:0;width:auto;height:auto;
+    margin:0;padding:0 8px;
+    display:flex;align-items:center;justify-content:center;
+    background:transparent;border:0;
+    color:#ff7dde;text-shadow:2px 2px #771254;
+    /* Match the two-letter initials, unless MUNROE would meet the frame.
+       Press leaves empty space under the capitals, so the line box sits high. */
+    font-size:max(24px,min(48px,calc(20cqi - 6.8px),calc((100cqi - 16px) / 5.88)));letter-spacing:-1px;line-height:1;
+    transform:translateY(0.06em)
+  }
+  .crew-status{grid-column:1/-1;width:auto;flex-basis:auto;margin-top:4px}
+}
+@media(max-width:380px){
+  .crew{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .dog.metal-frame{grid-column:1/-1;align-self:start;height:calc((100cqw - 10px) / 2)}
+}
