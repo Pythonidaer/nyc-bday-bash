@@ -36,7 +36,7 @@
 /* Preserve the full portrait surface behind the inset birthday caption. */
 .player:has(.birthday-tag) .initial{height:100%;box-sizing:border-box;padding:5px 0 22px}
 .player .birthday-tag{font-size:clamp(9px,8.5cqi,13px)}
-.dog.metal-frame img{left:23%;top:auto;bottom:12%;width:auto;max-width:23%;height:59%;transform:translateX(-50%);object-fit:contain}
+.dog.metal-frame img{left:23%;top:auto;bottom:14.2%;width:auto;max-width:23%;height:59%;transform:translateX(-50%);object-fit:contain}
 .dog.metal-frame span{left:40%;width:45%;top:38%;height:37%;text-align:center}
 @media(max-width:680px){.player:has(.birthday-tag) .initial{height:100%;padding:5px 0 19px}.player .birthday-tag{font-size:clamp(8px,8.5cqi,12px)}}
 
@@ -193,3 +193,17 @@ dialog::backdrop{background:#050414e8;backdrop-filter:none;-webkit-backdrop-filt
 .console.is-ready{opacity:1;transition:opacity 150ms linear}
 .console.is-settled{transition:none}
 @media(prefers-reduced-motion:reduce){.console{opacity:1}}
+
+/* Munroe uses the same hover lift and glow as a player tile.
+   Touch cancels a sticky hover, and a press still shows the glow. */
+.dog.metal-frame{transition:filter .15s,transform .15s}
+.dog.metal-frame:hover,
+.dog.metal-frame:active{filter:brightness(1.13) drop-shadow(0 0 3px #eb36e1);transform:translateY(-2px)}
+@media(hover:none){
+  .dog.metal-frame:hover{transform:none;filter:none}
+  .dog.metal-frame:active{filter:brightness(1.13) drop-shadow(0 0 3px #eb36e1);transform:translateY(-2px)}
+}
+@media(hover:none) and (pointer:coarse){
+  .dog.metal-frame:hover{filter:none;transform:none;transition:none}
+  .dog.metal-frame:active{filter:brightness(1.13) drop-shadow(0 0 3px #eb36e1);transform:translateY(-2px);transition:filter .15s,transform .15s}
+}
