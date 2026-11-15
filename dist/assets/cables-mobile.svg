@@ -40,8 +40,8 @@
       <circle r="2" fill="#323044"/>
     </g>
   </g>
-  <rect x="216" y="40" width="16" height="18" rx="3" fill="#1a132b" stroke="#aaa2bb"/>
-  <circle cx="224" cy="48" r="4" fill="#ff24c8" stroke="#ffd3fb"/>
+  <rect x="216" y="64" width="16" height="18" rx="3" fill="#1a132b" stroke="#aaa2bb"/>
+  <circle cx="224" cy="73" r="4" fill="#ff24c8" stroke="#ffd3fb"/>
   <g transform="translate(357 36) rotate(90)">
     <path d="M-8-12H8V12H-8Z" fill="url(#cuff)" stroke="#0d0b1b" stroke-width="2"/>
     <path d="M-4-8v16M4-8v16" stroke="#e2dded" stroke-width="1.25"/>
