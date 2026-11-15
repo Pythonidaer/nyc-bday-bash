@@ -1,0 +1,15 @@
+Ten royalty-free fart sound effects from Pixabay, used under the Pixabay Content License.
+https://pixabay.com/service/license-summary/
+
+No attribution is required. The files are sound effects in this website and are not redistributed as a stock library.
+
+1. dist/assets/farts/01.mp3 — fart, freesound_community — https://pixabay.com/sound-effects/people-fart-83471/
+2. dist/assets/farts/02.mp3 — Fart 4, aPebble — https://pixabay.com/sound-effects/film-special-effects-fart-4-228244/
+3. dist/assets/farts/03.mp3 — Wet Fart, DRAGON-STUDIO — https://pixabay.com/sound-effects/film-special-effects-wet-fart-335478/
+4. dist/assets/farts/04.mp3 — Fart 5, aPebble — https://pixabay.com/sound-effects/film-special-effects-fart-5-228245/
+5. dist/assets/farts/05.mp3 — Proud Fart, BeanFrog — https://pixabay.com/sound-effects/people-proud-fart-288263/
+6. dist/assets/farts/06.mp3 — wet fart, freesound_community — https://pixabay.com/sound-effects/people-wet-fart-6139/
+7. dist/assets/farts/07.mp3 — Fart noises, freesound_community — https://pixabay.com/sound-effects/people-fart-noises-83359/
+8. dist/assets/farts/08.mp3 — Ultimate Fart Sound, WalterMidnight — https://pixabay.com/sound-effects/people-ultimate-fart-sound-310131/
+9. dist/assets/farts/09.mp3 — Fart 3, aPebble — https://pixabay.com/sound-effects/film-special-effects-fart-3-228243/
+10. dist/assets/farts/10.mp3 — Fart 8, aPebble — https://pixabay.com/sound-effects/film-special-effects-fart-8-228248/
