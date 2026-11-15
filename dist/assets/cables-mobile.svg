@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 176" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="tube" x2="0" y2="1">
+      <stop stop-color="#333047"/>
+      <stop offset=".22" stop-color="#b4b4cd"/>
+      <stop offset=".38" stop-color="#666b87"/>
+      <stop offset=".65" stop-color="#24283c"/>
+      <stop offset=".9" stop-color="#84859d"/>
+      <stop offset="1" stop-color="#222236"/>
+    </linearGradient>
+    <linearGradient id="cuff">
+      <stop stop-color="#c7c3d7"/>
+      <stop offset=".3" stop-color="#555669"/>
+      <stop offset=".6" stop-color="#c2bfd0"/>
+      <stop offset="1" stop-color="#333247"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke-linecap="butt" stroke-linejoin="round">
+    <path d="M-30 114H118C158 114 176 64 222 62C268 60 284 114 308 114C324 114 332 106 332 90V-30" stroke="#080616" stroke-width="22"/>
+    <path d="M-30 114H118C158 114 176 64 222 62C268 60 284 114 308 114C324 114 332 106 332 90V-30" stroke="url(#tube)" stroke-width="16"/>
+    <path d="M-30 114H118C158 114 176 64 222 62C268 60 284 114 308 114C324 114 332 106 332 90V-30" stroke="#d3d0e0" stroke-width="1.5"/>
+    <path d="M-30 142H126C166 142 184 92 226 90C268 88 290 142 316 142C336 142 348 130 348 112V-12" stroke="#080616" stroke-width="22"/>
+    <path d="M-30 142H126C166 142 184 92 226 90C268 88 290 142 316 142C336 142 348 130 348 112V-12" stroke="url(#tube)" stroke-width="16"/>
+    <path d="M-30 142H126C166 142 184 92 226 90C268 88 290 142 316 142C336 142 348 130 348 112V-12" stroke="#d3d0e0" stroke-width="1.5"/>
+  </g>
+  <g>
+    <g transform="translate(150 126)">
+      <path d="M-9-20H9V20H-9Z" fill="url(#cuff)" stroke="#0d0b1b" stroke-width="2"/>
+      <path d="M-5-16v32M5-16v32" stroke="#e2dded" stroke-width="1.25"/>
+      <circle r="2" fill="#323044"/>
+    </g>
+    <g transform="translate(186 86) rotate(-52)">
+      <path d="M-9-20H9V20H-9Z" fill="url(#cuff)" stroke="#0d0b1b" stroke-width="2"/>
+      <path d="M-5-16v32M5-16v32" stroke="#e2dded" stroke-width="1.25"/>
+      <circle r="2" fill="#323044"/>
+    </g>
+    <g transform="translate(268 92) rotate(52)">
+      <path d="M-9-20H9V20H-9Z" fill="url(#cuff)" stroke="#0d0b1b" stroke-width="2"/>
+      <path d="M-5-16v32M5-16v32" stroke="#e2dded" stroke-width="1.25"/>
+      <circle r="2" fill="#323044"/>
+    </g>
+    <g transform="translate(340 96) rotate(90)">
+      <path d="M-9-18H9V18H-9Z" fill="url(#cuff)" stroke="#0d0b1b" stroke-width="2"/>
+      <path d="M-5-14v28M5-14v28" stroke="#e2dded" stroke-width="1.25"/>
+      <circle r="2" fill="#323044"/>
+    </g>
+  </g>
+  <rect x="216" y="40" width="16" height="18" rx="3" fill="#1a132b" stroke="#aaa2bb"/>
+  <circle cx="224" cy="48" r="4" fill="#ff24c8" stroke="#ffd3fb"/>
+</svg>
