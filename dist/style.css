@@ -331,3 +331,29 @@ dialog h3+ul.restaurant-list>li:first-child{padding-top:0}
 .nearby-buttons button{display:inline-flex;align-items:center;justify-content:center;gap:4px}
 .nearby-buttons .expand-arrow{width:11px;height:11px;stroke:#ff32cb;stroke-width:2.5}
 @media(max-width:960px){.question img{width:82px;height:82px}}
+
+/* The side column between tablet and desktop is too narrow for the desktop type size. */
+.home{container:homebase / inline-size}
+.checkin{flex-wrap:wrap;column-gap:10px;row-gap:4px}
+.checkin>span,.checkin strong{white-space:nowrap;flex-shrink:0}
+.checkin>span{font-size:clamp(7px,2.6cqi,10px)}
+.checkin strong{margin-left:auto;font-size:clamp(16px,6.2cqi,20px)}
+.nearby-buttons{padding-block:6px}
+.nearby-buttons button{position:relative;z-index:0;white-space:nowrap;transition:transform .34s cubic-bezier(.22,1.2,.36,1),background-color .2s ease,color .2s ease,border-color .2s ease}
+.nearby-buttons .expand-arrow{transition:stroke .2s ease}
+@container homebase (max-width:340px){
+  .nearby-buttons{flex-direction:column;align-items:stretch;gap:6px}
+  .nearby-buttons button{flex:none;width:100%;font-size:8px;padding:10px 12px;gap:8px}
+  .nearby-buttons .expand-arrow{width:12px;height:12px}
+}
+@media(hover:hover) and (pointer:fine){
+  .nearby-buttons:has(button:is(:hover,:focus-visible)) button:not(:hover,:focus-visible){transform:scale(.88)}
+  .nearby-buttons button:is(:hover,:focus-visible){transform:scale(1.12);z-index:1;background:#ed15b4;color:#100719;border-color:#100719}
+  .nearby-buttons button:is(:hover,:focus-visible) .expand-arrow{stroke:#100719}
+}
+.nearby-buttons button:active{transform:scale(1.12);z-index:1;background:#ed15b4;color:#100719;border-color:#100719}
+.nearby-buttons button:active .expand-arrow{stroke:#100719}
+.nearby-buttons:has(button:active) button:not(:active){transform:scale(.88)}
+@media(prefers-reduced-motion:reduce){
+  .nearby-buttons button{transform:none!important}
+}
