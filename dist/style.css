@@ -339,7 +339,7 @@ dialog h3+ul.restaurant-list>li:first-child{padding-top:0}
 .checkin>span{font-size:clamp(7px,2.6cqi,10px)}
 .checkin strong{margin-left:auto;font-size:clamp(16px,6.2cqi,20px)}
 .nearby-buttons{padding-block:6px}
-.nearby-buttons button{position:relative;z-index:0;white-space:nowrap;transition:transform .34s cubic-bezier(.22,1.2,.36,1),background-color .2s ease,color .2s ease,border-color .2s ease}
+.nearby-buttons button{position:relative;z-index:0;white-space:nowrap;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;transition:transform .16s cubic-bezier(.22,1.2,.36,1),background-color .16s ease,color .16s ease,border-color .16s ease}
 .nearby-buttons .expand-arrow{transition:stroke .2s ease}
 @container homebase (max-width:340px){
   .nearby-buttons{flex-direction:column;align-items:stretch;gap:6px}
@@ -351,9 +351,9 @@ dialog h3+ul.restaurant-list>li:first-child{padding-top:0}
   .nearby-buttons button:is(:hover,:focus-visible){transform:scale(1.12);z-index:1;background:#ed15b4;color:#100719;border-color:#100719}
   .nearby-buttons button:is(:hover,:focus-visible) .expand-arrow{stroke:#100719}
 }
-.nearby-buttons button:active{transform:scale(1.12);z-index:1;background:#ed15b4;color:#100719;border-color:#100719}
-.nearby-buttons button:active .expand-arrow{stroke:#100719}
-.nearby-buttons:has(button:active) button:not(:active){transform:scale(.88)}
+.nearby-buttons:has(button:is(:active,.pressed)) button:not(:is(:active,.pressed)){transform:scale(.88)}
+.nearby-buttons button:is(:active,.pressed){transform:scale(1.12);z-index:1;background:#ed15b4;color:#100719;border-color:#100719}
+.nearby-buttons button:is(:active,.pressed) .expand-arrow{stroke:#100719}
 @media(prefers-reduced-motion:reduce){
   .nearby-buttons button{transform:none!important}
 }
@@ -402,4 +402,44 @@ dialog h3+ul.restaurant-list>li:first-child{padding-top:0}
     justify-content:center;
     line-height:1;
   }
+}
+
+/* Two- and three-across modals: stack dotted lists onto separate lines. */
+@media(min-width:681px){
+  .stay{
+    display:grid;
+    grid-template-columns:auto auto 1fr;
+    align-items:baseline;
+  }
+  .stay-when{grid-column:1 / -1;grid-row:1}
+  .stay-offer{grid-column:1;grid-row:2;justify-self:start;width:auto;margin-bottom:12px}
+  .stay-price{grid-column:2;grid-row:2;justify-self:start;width:auto;margin-bottom:12px}
+  .stay-rooms{grid-column:1 / -1;grid-row:3}
+}
+@media(max-width:680px){
+  .restaurant-list li{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:2px;
+  }
+  .restaurant-list .rec-divider{display:none}
+  .stack-list .rec-divider{display:none}
+  .stack-list .stack-item{
+    display:block;
+    padding:11px 0;
+    border-bottom:1px solid #ed15b44d;
+  }
+  .stack-list .stack-item:first-child{padding-top:0}
+  .stack-list .stack-item:last-child{padding-bottom:0;border-bottom:0}
+  .stay-when strong{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:2px;
+  }
+  .stay-dot,.stay-price .rec-divider{display:none}
+  .top{font-size:8px}
+  .top>span{margin-left:4px}
+  .day-prefix{display:none}
 }
