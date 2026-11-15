@@ -1,8 +1,10 @@
-Ten royalty-free fart sound effects from Pixabay, used under the Pixabay Content License.
+Eleven royalty-free fart sound effects. The first is CC0 from Freesound. The rest are from Pixabay under the Pixabay Content License.
+https://creativecommons.org/publicdomain/zero/1.0/
 https://pixabay.com/service/license-summary/
 
 No attribution is required. The files are sound effects in this website and are not redistributed as a stock library.
 
+0. dist/assets/farts/00.mp3 — Fart With Reverb, TV_LING — CC0 — https://freesound.org/people/TV_LING/sounds/523468/ — also https://pixabay.com/sound-effects/fart-with-reverb-39675/
 1. dist/assets/farts/01.mp3 — fart, freesound_community — https://pixabay.com/sound-effects/people-fart-83471/
 2. dist/assets/farts/02.mp3 — Fart 4, aPebble — https://pixabay.com/sound-effects/film-special-effects-fart-4-228244/
 3. dist/assets/farts/03.mp3 — Wet Fart, DRAGON-STUDIO — https://pixabay.com/sound-effects/film-special-effects-wet-fart-335478/

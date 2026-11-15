@@ -420,6 +420,13 @@ dialog h3+ul.restaurant-list>li:first-child{padding-top:0}
   .stay-price{grid-column:2;grid-row:2;justify-self:start;width:auto;margin-bottom:12px}
   .stay-rooms{grid-column:1 / -1;grid-row:3}
 }
+/* 2- and 3-across: fins hinge a little farther from the logo as the page
+   scrolls, then settle back as it returns. --fin-spread is set from scroll. */
+@media(max-width:680px) and (prefers-reduced-motion:no-preference){
+  .brand .ornament{transform:rotate(calc(-12deg - var(--fin-spread, 0deg)))}
+  .brand .ornament.mirror{transform:scaleX(-1) rotate(calc(-12deg - var(--fin-spread, 0deg)))}
+}
+
 @media(max-width:680px){
   .restaurant-list li{
     display:flex;

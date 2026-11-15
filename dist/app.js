@@ -24,7 +24,34 @@ document.querySelectorAll('.nearby-buttons button').forEach(button=>{
   button.addEventListener('pointerup',release);
   button.addEventListener('pointercancel',release);
 });
-const fartTracks=['assets/farts/01.mp3','assets/farts/02.mp3','assets/farts/03.mp3','assets/farts/04.mp3','assets/farts/05.mp3','assets/farts/06.mp3','assets/farts/07.mp3','assets/farts/08.mp3','assets/farts/09.mp3','assets/farts/10.mp3'];
+const fartTracks=['assets/farts/00.mp3','assets/farts/01.mp3','assets/farts/02.mp3','assets/farts/03.mp3','assets/farts/04.mp3','assets/farts/05.mp3','assets/farts/06.mp3','assets/farts/07.mp3','assets/farts/08.mp3','assets/farts/09.mp3','assets/farts/10.mp3'];
 const fartAudio=new Audio();
 let fartIndex=0;
 document.querySelector('#heart-fart').addEventListener('click',()=>{const src=fartTracks[fartIndex];fartIndex=(fartIndex+1)%fartTracks.length;fartAudio.pause();fartAudio.src=src;fartAudio.play()});
+
+// On 2- and 3-across, the fins splay away from the logo with scroll position
+// and return as that position comes back. The travel matches the header
+// leaving the screen, so the motion reads while the fins are still visible.
+const brand=document.querySelector('.brand');
+const finSpreadQuery=window.matchMedia('(max-width:680px)');
+const finMotionQuery=window.matchMedia('(prefers-reduced-motion: reduce)');
+const finSpreadDistance=170;
+const finSpreadMax=16;
+let finSpreadFrame=0;
+function updateFinSpread(){
+  finSpreadFrame=0;
+  if(!brand)return;
+  if(!finSpreadQuery.matches||finMotionQuery.matches){
+    brand.style.removeProperty('--fin-spread');
+    return;
+  }
+  const progress=Math.min(1,Math.max(0,window.scrollY/finSpreadDistance));
+  brand.style.setProperty('--fin-spread',(progress*finSpreadMax).toFixed(2)+'deg');
+}
+function requestFinSpread(){
+  if(!finSpreadFrame)finSpreadFrame=requestAnimationFrame(updateFinSpread);
+}
+finSpreadQuery.addEventListener('change',updateFinSpread);
+finMotionQuery.addEventListener('change',updateFinSpread);
+window.addEventListener('scroll',requestFinSpread,{passive:true});
+updateFinSpread();
