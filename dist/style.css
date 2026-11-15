@@ -459,3 +459,10 @@ dialog h3+ul.restaurant-list>li:first-child{padding-top:0}
   .top>span{margin-left:4px}
   .day-prefix{display:none}
 }
+
+/* The schedule bar only padded the hazard stripes on the left, so that
+   band stayed wider at every width. Match the right side. The button
+   slant is unchanged, so the two bands mirror: wider at the top left,
+   wider at the bottom right. */
+.ticker{padding-right:45px}
+@media(max-width:960px){.ticker{padding-right:20px}}
