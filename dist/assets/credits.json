@@ -10,10 +10,19 @@
     "note": "Decorative skyline, not a photograph of NYC or the accommodation."
   },
   {
-    "file": "skate.svg",
-    "title": "Roller Skate",
+    "file": "dance.svg",
+    "title": "Body Balance",
     "author": "Delapouite",
-    "source": "https://game-icons.net/1x1/delapouite/roller-skate.html",
+    "source": "https://game-icons.net/1x1/delapouite/body-balance.html",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "modifications": "Removed background and recolored foreground for synthwave palette."
+  },
+  {
+    "file": "palette.svg",
+    "title": "Palette",
+    "author": "Delapouite",
+    "source": "https://game-icons.net/1x1/delapouite/palette.html",
     "license": "CC BY 3.0",
     "license_url": "https://creativecommons.org/licenses/by/3.0/",
     "modifications": "Removed background and recolored foreground for synthwave palette."

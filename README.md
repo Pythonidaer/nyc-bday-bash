@@ -26,12 +26,20 @@ No AI-generated imagery is included in the website. Layout, metallic frames, gol
 - File: `dist/assets/city.png`
 - Modifications: Unmodified example 03 from original 2021 archive
 
-### Roller Skate
+### Body Balance
 
 - Creator: Delapouite
-- Source: https://game-icons.net/1x1/delapouite/roller-skate.html
+- Source: https://game-icons.net/1x1/delapouite/body-balance.html
 - License: [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
-- File: `dist/assets/skate.svg`
+- File: `dist/assets/dance.svg`
+- Modifications: Removed background and recolored foreground for synthwave palette.
+
+### Palette
+
+- Creator: Delapouite
+- Source: https://game-icons.net/1x1/delapouite/palette.html
+- License: [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
+- File: `dist/assets/palette.svg`
 - Modifications: Removed background and recolored foreground for synthwave palette.
 
 ### Martini

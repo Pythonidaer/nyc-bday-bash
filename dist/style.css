@@ -270,3 +270,10 @@ dialog::backdrop{background:#050414e8;backdrop-filter:none;-webkit-backdrop-filt
 dialog h3.split{margin-top:28px}
 dialog h3+ol,dialog h3+ul.restaurant-list{margin-top:0}
 dialog h3+ul.restaurant-list>li:first-child{padding-top:0}
+.home .expand{position:relative;overflow:hidden}
+.home .expand::after{content:"";position:absolute;top:-30%;bottom:-30%;left:0;width:42%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.72),transparent);transform:translateX(-220%) skewX(-18deg);animation:expand-shine 3.6s ease-in-out infinite;pointer-events:none}
+@keyframes expand-shine{0%,58%{transform:translateX(-220%) skewX(-18deg)}80%,100%{transform:translateX(420%) skewX(-18deg)}}
+.question img{width:118px;height:118px;display:block}
+.nearby-buttons button{display:inline-flex;align-items:center;justify-content:center;gap:4px}
+.nearby-buttons .expand-arrow{width:11px;height:11px;stroke:#ff32cb;stroke-width:2.5}
+@media(max-width:960px){.question img{width:82px;height:82px}}

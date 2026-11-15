@@ -20,14 +20,15 @@ A birthday-weekend itinerary for ten friends and Munroe in NYC, November 20–22
 | Asset | Origin and author | License / changes | Local file |
 |---|---|---|---|
 | Home Base skyline | **Skyline Background**, FabinhoSC — https://opengameart.org/content/skyline-background | Recorded as CC0 in the project credits. Unmodified example 03 from the original 2021 archive. Decorative skyline, not a verified depiction of NYC or the Airbnb. The source page could not be re-fetched during this documentation review. | `dist/assets/city.png` |
-| Roller skate | Delapouite — https://game-icons.net/1x1/delapouite/roller-skate.html | CC BY 3.0. Background removed; foreground recolored cyan. CSS adds pink/cyan shadows and the surrounding retro scene. | `dist/assets/skate.svg` |
+| Body balance | Delapouite — https://game-icons.net/1x1/delapouite/body-balance.html | CC BY 3.0. Background removed; foreground recolored cyan with a pink offset. | `dist/assets/dance.svg` |
+| Painter palette | Delapouite — https://game-icons.net/1x1/delapouite/palette.html | CC BY 3.0. Background removed; foreground recolored cyan with a pink offset. | `dist/assets/palette.svg` |
 | Cocktail | **Martini**, Lorc — https://game-icons.net/1x1/lorc/martini.html | CC BY 3.0. Background removed; foreground recolored pink. CSS supplies shadows and the surrounding scene. | `dist/assets/cocktail.svg` |
 | Pixel font | **Press Start 2P**, CodeMan38 — https://fonts.google.com/specimen/Press+Start+2P | SIL Open Font License 1.1. Local license retained. | `dist/assets/press-start.ttf`, `font-license.txt` |
 | Current Munroe portrait | Custom SVG code based on the owner-provided photograph | Pixel-grid portrait using tan/cream fur, white blaze, and blue eye. Assistant-authored SVG, not an image-generator output. | `dist/assets/munroe-portrait.svg` |
 | Frames, ornaments, cables | Custom assistant-authored SVG code | Designed to approximate the reference’s industrial aesthetic; not downloaded from a metal-frame asset pack. | `armor-frame.svg`, `nameplate.svg`, `munroe-frame.svg`, `fin.svg`, `cables.svg`, `grit.svg` in `dist/assets/` |
 | Small icons | Custom inline SVG and CSS | Person silhouette, calendar icons, Expand arrow, radio controls, and status dot. | `dist/index.html`, `dist/style.css`, `dist/app.js` |
 
-The skate and cocktail are **SVG illustrations, not emoji and not custom-drawn original shapes**. Their original creators are credited above. They are scalable vector silhouettes rather than true pixel-art sprites. The website contains no image-generator-produced bitmap assets; some custom SVG/code was authored by the assistant, so this should not be described as having no AI assistance.
+The dance figure, painter palette, and cocktail are **SVG illustrations, not emoji and not custom-drawn original shapes**. Their original creators are credited above. They are scalable vector silhouettes rather than true pixel-art sprites. The website contains no image-generator-produced bitmap assets; some custom SVG/code was authored by the assistant, so this should not be described as having no AI assistance.
 
 CC BY 3.0: https://creativecommons.org/licenses/by/3.0/
 CC0: https://creativecommons.org/publicdomain/zero/1.0/
