@@ -133,7 +133,7 @@ button,a{touch-action:manipulation}
 .console{isolation:isolate;background-image:repeating-linear-gradient(135deg,transparent 0 8px,#ff20c70b 8px 9px)}
 .crew{background-image:radial-gradient(ellipse at 85% 32%,#00c9ff80,transparent 45%),radial-gradient(ellipse at 10% 90%,#fc00c760,transparent 60%);background-blend-mode:normal}
 .player,.player.selected,.player:hover,.player.selected:hover,.dog.metal-frame,.ornament,.activity img{filter:none;transition:none}
-.player.selected{outline:2px solid #25ffff}
+.player.selected{outline:none}
 dialog{box-shadow:0 0 0 3px #ed15b4}
 dialog::backdrop{background:#050414e8;backdrop-filter:none;-webkit-backdrop-filter:none}
 }
@@ -142,7 +142,7 @@ dialog::backdrop{background:#050414e8;backdrop-filter:none;-webkit-backdrop-filt
 .crew-heading .radio-player{display:grid;grid-template-columns:70px 28px 28px;align-items:center}
 .crew-heading .radio-player .radio-name{grid-area:1/1;margin:0;font-size:6px}
 .crew-heading .radio-player:has(.radio-status:not(:empty)) .radio-name{visibility:hidden}
-.crew-heading .radio-player .radio-status{display:block;grid-area:1/1;width:70px;min-width:0;margin:0;font:6px/1.4 Press,monospace;color:#79ff39;white-space:nowrap;text-align:left}
+.crew-heading .radio-player .radio-status{display:block;grid-area:1/1;width:70px;min-width:0;margin:0;padding-right:6px;font:6px/1 Press,monospace;color:#79ff39;white-space:nowrap;text-align:right}
 .crew-heading #radio-play{grid-area:1/2}.crew-heading #radio-stop{grid-area:1/3}
 }
 @media(max-width:400px){.crew-heading .radio-player{grid-template-columns:63px 25px 25px}.crew-heading .radio-player .radio-name,.crew-heading .radio-player .radio-status{font-size:5px}.crew-heading .radio-player .radio-status{width:63px}}
@@ -214,7 +214,7 @@ dialog::backdrop{background:#050414e8;backdrop-filter:none;-webkit-backdrop-filt
 /* TL / DR sits between the date and the arrows. Below 960px the date and arrows drop, and it stays at the top right. */
 .top .right{display:flex;align-items:center;gap:14px;float:right;height:28px}
 .top .right span{margin-left:0}
-.tldr-launch{display:inline-flex;align-items:center;height:28px;padding:0 2px;background:none;color:#fff09c;font-family:system-ui,sans-serif;font-weight:800;font-size:13px;letter-spacing:.04em;line-height:1}
+.tldr-launch{display:inline-flex;align-items:center;height:28px;padding:0 2px;background:none;color:#fff09c;font-family:Press,monospace;font-weight:400;font-size:inherit;letter-spacing:0;line-height:inherit}
 .tldr-launch:hover{color:#fff}
 @media(max-width:960px){
   .top{display:flex;align-items:center}
@@ -356,4 +356,50 @@ dialog h3+ul.restaurant-list>li:first-child{padding-top:0}
 .nearby-buttons:has(button:active) button:not(:active){transform:scale(.88)}
 @media(prefers-reduced-motion:reduce){
   .nearby-buttons button{transform:none!important}
+}
+
+/* Safari sizes a border-image button from armor-frame.svg (180×150), so the
+   iPhone tiles stay portrait. The slot is squared from its column width, and
+   the button fills that box. */
+.player{
+  -webkit-appearance:none;
+  appearance:none;
+  min-height:0;
+}
+.player-slot{position:relative}
+.player-slot::before{
+  content:"";
+  display:block;
+  padding-top:100%;
+}
+.player-slot>.player{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  aspect-ratio:auto;
+}
+
+/* Phone calendar: weekday letters share the date columns and the date size. */
+@media(max-width:960px){
+  .weekdays{
+    padding:8px 8px 6px;
+    font-family:Press,monospace;
+    font-size:9px;
+    font-weight:400;
+    line-height:1;
+    align-items:center;
+  }
+  .weekdays span{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .calendar .dates{padding-left:8px;padding-right:8px}
+  .calendar .dates button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    line-height:1;
+  }
 }
