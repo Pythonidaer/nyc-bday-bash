@@ -17,7 +17,7 @@ function revealStage(){stage.classList.add('is-ready');setTimeout(()=>stage.clas
 const fontReady=document.fonts&&document.fonts.ready?document.fonts.ready.catch(()=>{}):Promise.resolve();
 Promise.race([fontReady,new Promise(resolve=>setTimeout(resolve,800))]).then(revealStage);
 
-document.querySelectorAll('.nearby-buttons button').forEach(button=>{
+document.querySelectorAll('.nearby-buttons button, .home .expand').forEach(button=>{
   let releaseTimer=0;
   const release=()=>{clearTimeout(releaseTimer);releaseTimer=setTimeout(()=>button.classList.remove('pressed'),420)};
   button.addEventListener('pointerdown',()=>{clearTimeout(releaseTimer);button.classList.add('pressed')});
@@ -36,7 +36,7 @@ const brand=document.querySelector('.brand');
 const finSpreadQuery=window.matchMedia('(max-width:680px)');
 const finMotionQuery=window.matchMedia('(prefers-reduced-motion: reduce)');
 const finSpreadDistance=170;
-const finSpreadMax=16;
+const finSpreadMax=22;
 let finSpreadFrame=0;
 function updateFinSpread(){
   finSpreadFrame=0;
