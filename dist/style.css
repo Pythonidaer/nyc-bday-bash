@@ -466,3 +466,57 @@ dialog h3+ul.restaurant-list>li:first-child{padding-top:0}
    wider at the bottom right. */
 .ticker{padding-right:45px}
 @media(max-width:960px){.ticker{padding-right:20px}}
+
+.cable-dot{display:none}
+
+/* The upper mobile pipe sits flush under Munroe, wraps the right side,
+   and climbs past Munroe toward JC. The lower pipe stays through DA, then
+   runs up and right behind JP and JC. The sheet extends above the tiles
+   and a little past the right edge. A frame-style bolt sits on the bottom
+   right of that cable, with the pink dot centered on it. */
+@media(max-width:680px){
+  .crew{overflow:visible;margin-bottom:28px}
+  .cables{overflow:visible}
+  .cables img{
+    inset:auto auto auto 0;
+    top:calc(-100% * 24 / 176);
+    width:calc(100% * 378 / 360);
+    height:calc(100% * 238 / 176);
+  }
+  .cables::before{
+    content:"";
+    position:absolute;
+    left:calc(100% * 349 / 360);
+    top:calc(100% * 164 / 176);
+    transform:translate(-50%, -50%);
+    border-radius:50%;
+    pointer-events:none;
+    z-index:3;
+    width:28px;
+    height:28px;
+    background:radial-gradient(circle at 38% 34%, #4a455c 0 7%, #171325 30% 60%, #e4def0 64%, #b9b2c9 76%, #6e697f 90%, #1c1828 100%);
+    box-shadow:0 0 0 1px #080513;
+  }
+  .cable-dot{
+    display:block;
+    position:absolute;
+    z-index:4;
+    left:calc(100% * 349 / 360);
+    top:calc(100% * 164 / 176);
+    width:22px;
+    height:22px;
+    transform:translate(-50%, -50%);
+    padding:0;
+    border-radius:50%;
+    pointer-events:auto;
+    cursor:pointer;
+    background:radial-gradient(circle, #ffe8fc 0 2px, #ff4ad2 2px 4px, #e01098 4px 5.5px, #6c0848 5.5px 6px, transparent 6.5px);
+    animation:cable-dot-shine 2.8s ease-in-out infinite;
+  }
+}
+@keyframes cable-dot-shine{
+  0%,100%{transform:translate(-50%, -50%) scale(1);filter:brightness(1)}
+  40%{transform:translate(-50%, -50%) scale(1.06);filter:brightness(1.12)}
+  55%{transform:translate(-50%, -50%) scale(1.16);filter:brightness(1.65) drop-shadow(0 0 4px #ff4ad2)}
+  75%{transform:translate(-50%, -50%) scale(1.04);filter:brightness(1.08)}
+}
